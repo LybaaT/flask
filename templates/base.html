@@ -25,14 +25,13 @@
         .nav a:hover {
             background-color: rgb(240, 179, 188);
         }
-        .nav a.active {
-            background-color: rgb(209, 158, 166);
-            color: white;
-        }
         h1 {
             text-align: center;
             color: palevioletred;
             font-size: 40px;
+        }
+        .art {
+            width: 400px;
         }
     </style>
 </head>
@@ -40,9 +39,8 @@
     <h1>{% block title %}{% endblock %}</h1>
 
     <div class="nav">
-        <a class="active" href="/">Home</a>
-        <a href="/shop">Shop</a>
-        <a href="/contact">Contact</a>
+        <a href="/">Home</a>
+        <a href="/art">Art</a>
         <a href="/about">About</a>
       </div>
 

@@ -9,12 +9,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/contact')
-def shop():
-    return render_template('contact.html')
+@app.route('/art')
+def art():
+    return render_template('art.html')
 
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-app.run(host='0.0.0.0', port=port)
+app.run(host='0.0.0.0', port=port, debug=True)
