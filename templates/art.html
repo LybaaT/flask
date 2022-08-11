@@ -4,6 +4,13 @@
 
 
 {% block content %} 
-<img src="/static/art/birch.jpeg" class="art">
 
+<div class="centeredContainer">
+    {% for painting in paintings %}
+    <div class="paintingSubContainer">
+        <img src="/static/art/{{painting[0]}}.jpeg" class="art">
+        <p>{{painting[1]}}</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

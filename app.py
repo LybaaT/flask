@@ -11,7 +11,22 @@ def index():
 
 @app.route('/art')
 def art():
-    return render_template('art.html')
+    paintings = [
+        ['birch', 'the birch sings a song, it calls for something.'] ,
+        ['bonfire', 'the birch sings a song, it calls for something.'],
+        ['eiffel', 'the birch sings a song, it calls for something.'],
+        ['field', 'the birch sings a song, it calls for something.'],
+        ['italy', 'the birch sings a song, it calls for something.'],
+        ['kyoto', 'the birch sings a song, it calls for something.'],
+        ['lake', 'the birch sings a song, it calls for something.'],
+        ['lemons', 'the birch sings a song, it calls for something.'],
+        ['macca', 'the birch sings a song, it calls for something.'],
+        ['purp', 'the birch sings a song, it calls for something.'],
+        ['saddar', 'the birch sings a song, it calls for something.'],
+        ['shapes', 'the birch sings a song, it calls for something.'],
+        ['waves', 'the birch sings a song, it calls for something.'],
+    ]
+    return render_template('art.html', paintings=paintings)
 
 @app.route('/about')
 def about():
