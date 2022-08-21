@@ -6,29 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask</title>
     <style>
+        @font-face {
+            font-family: "regular";
+            src: url(/font/SourceSansPro-Regular.otf);
+        }
         body {
             margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100vw;
+            height: 40vh;
+            background-color: #6d6875;
+        }
+        h1 {
+            margin: 0;
+            font-family: "regular";
+            color: #fefae0;
+            font-size: 100px;
+            position: fixed;
+            left: 10vh;
+            top: 25vh;
         }
         .nav {
             overflow: hidden;
-            background-color: rgb(250, 232, 235);
         }
         .nav a {
-            float: left;
+            float: right;
             text-align: center;
-            padding: 14px 16px;
+            padding: 20px 40px;
             text-decoration: none;
-            font-size: 20px;
-            color: black;
+            font-size: 15px;
+            color: #fefae0;
             transition: 0.2s ease-in-out;
         }
         .nav a:hover {
-            background-color: rgb(240, 179, 188);
-        }
-        h1 {
-            text-align: center;
-            color: palevioletred;
-            font-size: 40px;
+            color: #fca311;
         }
         .art {
             width: 400px;
@@ -46,19 +59,35 @@
             font-size: 20px;
             width: 400px;
         }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #6d6875;
+            color: #fefae0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>{% block title %}{% endblock %}</h1>
+    <header>
+        <div class="nav">
+            <a href="/contact">Contact Me</a>
+            <a href="/writer">Portfolio</a>
+            <a href="/about">About</a>
+            <a href="/art">Art</a>
+            <a href="/">Home</a>
+        </div>
+        <h1>{% block title %}{% endblock %}</h1>
+    </header>
 
-    <div class="nav">
-        <a href="/">Home</a>
-        <a href="/art">Art</a>
-        <a href="/about">About</a>
-      </div>
-
-      <content>
+    <content>
         {% block content %} {% endblock %}
     </content>
+
+    <footer>
+        <h4>© 2021 Laiba Tariq. All Rights Reserved.</h4>
+    </footer>
 </body>
 </html>
