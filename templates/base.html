@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask</title>
     <style>
+        {% block css %}{% endblock %}
+        
         @font-face {
             font-family: "regular";
             src: url(/static/font/SourceSansPro-Regular.otf);
+        }
+        @font-face {
+            font-family: "light";
+            src: url(/static/font/SourceSansPro-Light.otf);
         }
         body {
             margin: 0;
@@ -26,7 +32,7 @@
             font-family: "regular";
             letter-spacing: 2px;
             color: #fefae0;
-            font-size: 100px;
+            font-size: 5vw;
             position: absolute;
             left: 10vh;
             top: 25vh;
@@ -35,18 +41,18 @@
             overflow: hidden;
         }
         .nav a {
-            font-family: "regular";
+            font-family: "light";
             letter-spacing: 2px;
             float: right;
             text-align: center;
             padding: 20px 40px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 0.8vw;
             color: #fefae0;
             transition: 0.2s ease-in-out;
         }
         .nav a:hover {
-            color: #fca311;
+            color: #ff9d00;
         }
         .art {
             width: 400px;
@@ -63,9 +69,6 @@
         .description {
             font-size: 20px;
             width: 400px;
-        }
-        .error {
-            background-color: #6d6875;
         }
         footer {
             position: absolute;

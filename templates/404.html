@@ -1,12 +1,52 @@
 {% extends 'base.html' %} 
+{% block css %}
+body {
+    background-color: #6d6875;
+}
+h2 {
+    margin: 0;
+    font-family: "regular";
+    letter-spacing: 2px;
+    color: #fefae0;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 10vh;
+    top: 40vh;
+}
+button {
+    border: 2px solid #fefae0;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #6d6875;
+    padding: 20px;
+    position: absolute;
+    left: 10vh;
+    top: 50vh;
+    color: #fefae0;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+    color: #6d6875;
+    background-color: #fefae0;
+}
+a {
+    text-decoration: none;
+}
+.stars {
+    position: absolute;
+    width: 20vw;
+    right: 80px;
+    bottom: 100px;
+}
+{% endblock %}
 
 {% block title %}404: You've made an oopsie!{% endblock %}
 
 
 {% block content %} 
 
-<div class="centeredContainer error">
-    <h2>This doesnt exist, go back :D</h2>
-    <a href="/">go back</a>
-</div>
+    <h2>This page is either under works or doesn't exist at all. </h2>
+    <a href="/"><button>Go home</button></a>
+    <img src="/static/star.png" class="stars">
+
 {% endblock %}
