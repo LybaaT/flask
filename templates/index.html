@@ -1,9 +1,27 @@
 {% extends 'base.html' %} 
+{% block intro %}
+.intro {
+    font-family: "regular";
+    font-size: 20px;
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 70px;
+    background-color: yellow;
+}
+{% endblock %}
 
 {% block title %}Laiba Tariq{% endblock %}
 
 {% block content %} 
-
-
-
+<div class="intro">
+    <h2>Hey, I'm Laiba.</h2>
+    <p>Thank you for coming to my website. I'm a content writer who likes to have
+        130 hobbies. This website is a mix of my work portfolio, poems, paintings
+        and some more. If you'd like to reach out to me, I'd gladly respond! I 
+        hope you enjoy your stay here. <br>
+        Regards, <br>
+        Laiba T.
+    </p>
+</div>
 {% endblock %}
