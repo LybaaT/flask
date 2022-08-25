@@ -16,8 +16,8 @@ def homepage():
 @app.route('/art')
 def art():
     paintings = [
-        ['lemons'],
-        ['bonfire'],
+        ['birch'] ,
+        ['purp'],
         ['shapes'],
         ['field'],
         ['italy'],
@@ -25,9 +25,9 @@ def art():
         ['macca'],
         ['eiffel'],
         ['saddar'],
+        ['lemons'],
+        ['bonfire'],
         ['lake'],
-        ['birch'] ,
-        ['purp'],
         ['waves'],
     ]
     return render_template('art.html', paintings=paintings)
