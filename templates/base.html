@@ -58,9 +58,13 @@
         }
         .art {
             width: 400px;
-            
+            -webkit-filter: brightness(100%);
             margin: 10px;
             padding: 10px;
+            transition: 0.2s ease-in-out;
+        }
+        .art:hover {
+            -webkit-filter: brightness(50%);
         }
         .centeredContainer {
             text-align: center;
