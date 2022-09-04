@@ -16,19 +16,19 @@ def homepage():
 @app.route('/art')
 def art():
     paintings = [
-        ['birch'] ,
-        ['purp'],
-        ['shapes'],
-        ['field'],
-        ['italy'],
-        ['kyoto'],
-        ['macca'],
-        ['eiffel'],
-        ['saddar'],
-        ['lemons'],
-        ['bonfire'],
-        ['lake'],
-        ['waves'],
+        ['birch', 'Barcode Canopy'] ,
+        ['purp', 'Blooms in Autumn'],
+        ['shapes', 'C between the cracks'],
+        ['field', 'Fleeting trail'],
+        ['italy', 'balloons on the high street'],
+        ['kyoto', 'Kyoto Rising'],
+        ['macca', 'Socially Distanced Pilgrimage'],
+        ['eiffel', 'As seen by a tourist'],
+        ['saddar', 'Awaiting Birds'],
+        ['lemons', 'Inari pockets on gingham'],
+        ['bonfire', '3 fires'],
+        ['lake', 'Bob Gloss'],
+        ['waves', '1000 gsm'],
     ]
     return render_template('art.html', paintings=paintings)
 
